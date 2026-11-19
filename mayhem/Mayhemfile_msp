@@ -1,0 +1,9 @@
+project: savantenvs/ExpressLRS
+target: msp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/msp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msp
+    libfuzzer: true
+    timeout: 10

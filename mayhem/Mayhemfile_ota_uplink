@@ -1,0 +1,9 @@
+project: savantenvs/ExpressLRS
+target: ota_uplink
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ota_uplink/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ota_uplink
+    libfuzzer: true
+    timeout: 10

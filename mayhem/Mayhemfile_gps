@@ -1,0 +1,9 @@
+project: savantenvs/ExpressLRS
+target: gps
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gps/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gps
+    libfuzzer: true
+    timeout: 10

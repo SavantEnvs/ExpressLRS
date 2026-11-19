@@ -1,0 +1,9 @@
+project: savantenvs/ExpressLRS
+target: crsf2msp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crsf2msp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_crsf2msp
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/ExpressLRS
+target: crsf_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crsf_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_crsf_parser
+    libfuzzer: true
+    timeout: 10
